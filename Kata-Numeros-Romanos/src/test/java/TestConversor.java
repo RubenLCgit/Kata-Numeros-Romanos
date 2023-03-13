@@ -13,4 +13,9 @@ public class TestConversor {
     void convert_2_to_II(){
         assertEquals("II", new Conversor().convert(2));
     }
+
+    @Test
+    void convert_3_to_III(){
+        assertEquals("III", new Conversor().convert(3));
+    }
 }
