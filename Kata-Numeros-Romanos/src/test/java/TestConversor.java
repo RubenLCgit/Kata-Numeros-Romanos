@@ -8,4 +8,9 @@ public class TestConversor {
     void convert_1_to_I(){
         assertEquals("I", new Conversor().convert(1));
     }
+
+    @Test
+    void convert_2_to_II(){
+        assertEquals("II", new Conversor().convert(2));
+    }
 }
