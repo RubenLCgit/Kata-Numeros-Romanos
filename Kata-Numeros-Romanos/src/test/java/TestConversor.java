@@ -28,4 +28,9 @@ public class TestConversor {
     void convert_thousands_to_Roman_string(int input, String expectedOutput) {
         assertEquals(expectedOutput, new Conversor().convert(input));
     }
+
+    @Test
+    void convert_number_to_RomanNumber(){
+        assertEquals("MDCCCXCVIII", new Conversor().convert(1898));
+    }
 }
