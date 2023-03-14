@@ -22,4 +22,10 @@ public class TestConversor {
     void convert_hundreds_to_Roman_string(int input, String expectedOutput) {
         assertEquals(expectedOutput, new Conversor().convert(input));
     }
+
+    @ParameterizedTest
+    @CsvSource({ "1000,M", "2000,MM", "3000,MMM" })
+    void convert_thousands_to_Roman_string(int input, String expectedOutput) {
+        assertEquals(expectedOutput, new Conversor().convert(input));
+    }
 }

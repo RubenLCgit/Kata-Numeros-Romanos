@@ -48,7 +48,16 @@ public class Conversor {
         else if (numCent==1) centenas = "C";
         else centenas = "";
 
-        return centenas+decenas+unidades;
+        int numMill = (number/1000)%10;
+
+        String millar="";
+
+        if (numMill==3) millar = "MMM";
+        else if (numMill==2) millar = "MM";
+        else if (numMill==1) millar = "M";
+        else millar = "";
+
+        return millar+centenas+decenas+unidades;
 
 
     }
