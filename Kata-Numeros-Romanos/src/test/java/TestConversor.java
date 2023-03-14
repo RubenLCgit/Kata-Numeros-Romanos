@@ -1,21 +1,14 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.kataNumerosRomanos.Conversor;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestConversor {
-    @Test
-    void convert_1_to_I(){
-        assertEquals("I", new Conversor().convert(1));
-    }
-
-    @Test
-    void convert_2_to_II(){
-        assertEquals("II", new Conversor().convert(2));
-    }
-
-    @Test
-    void convert_3_to_III(){
-        assertEquals("III", new Conversor().convert(3));
+    @ParameterizedTest
+    @CsvSource({ "1,I", "2,II", "3,III" })
+    void convert_number_to_FizzBuzz_string(int input, String expectedOutput) {
+        assertEquals(expectedOutput, new Conversor().convert(input));
     }
 }

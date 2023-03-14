@@ -2,8 +2,10 @@ package org.kataNumerosRomanos;
 
 public class Conversor {
     public String convert(int number){
-        if (number==3) return "III";
-        if (number==2) return "II";
-        return "I";
+        String conerversion;
+        if (number==3) conerversion = "III";
+        else if (number==2) conerversion = "II";
+        else conerversion = "I";
+        return conerversion;
     }
 }
