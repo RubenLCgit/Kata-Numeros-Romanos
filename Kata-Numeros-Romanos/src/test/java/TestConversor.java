@@ -16,4 +16,10 @@ public class TestConversor {
     void convert_tens_to_Roman_string(int input, String expectedOutput) {
         assertEquals(expectedOutput, new Conversor().convert(input));
     }
+
+    @ParameterizedTest
+    @CsvSource({ "100,C", "200,CC", "300,CCC", "400,CD", "500,D", "600,DC", "700,DCC", "800,DCCC", "900,CM" })
+    void convert_hundreds_to_Roman_string(int input, String expectedOutput) {
+        assertEquals(expectedOutput, new Conversor().convert(input));
+    }
 }

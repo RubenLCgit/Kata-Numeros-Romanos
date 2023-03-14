@@ -33,7 +33,22 @@ public class Conversor {
         else if (numDec==1) decenas = "X";
         else decenas = "";
 
-        return decenas+unidades;
+        int numCent = (number/100)%10;
+
+        String centenas="";
+
+        if (numCent==9) centenas = "CM";
+        else if (numCent==8) centenas = "DCCC";
+        else if (numCent==7) centenas = "DCC";
+        else if (numCent==6) centenas = "DC";
+        else if (numCent==5) centenas = "D";
+        else if (numCent==4) centenas = "CD";
+        else if (numCent==3) centenas = "CCC";
+        else if (numCent==2) centenas = "CC";
+        else if (numCent==1) centenas = "C";
+        else centenas = "";
+
+        return centenas+decenas+unidades;
 
 
     }
