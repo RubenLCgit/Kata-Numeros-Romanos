@@ -23,6 +23,7 @@
                 <configuration>
                     <includes>
                         <include>/*Test.java</include>
+                        <include>/Test*.java</include>
                         <include>/Test.java</include>
                         <include>**/Tests.java</include>
                     </includes>
@@ -46,8 +47,14 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.9.0</version>
-            <scope>test</scope>
+            <version>5.9.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
